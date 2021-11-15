@@ -105,3 +105,41 @@
         содержащих дополнительную информацию из входных данных. Обычно это ПЭТ/КТ и ПЭТ/МРТ.
     \end{itemize}
 \end{frame}
+
+\begin{frame}
+    \frametitle{Метрики качества}
+    \begin{itemize}
+        \item Обучающая выборка: \(X^m=\{(x_1,y_1),\dots ,(x_m, y_m)\}\)
+        \item Задача классификации на 2 класса: \(X\rightarrow Y, Y=\{+1, -1\}\)
+        \item Алгоритм классификации \(a(x): X\rightarrow Y\)
+        \item Доля ложных положительных классификаций
+        \[FPR(a, X^m) = \frac{\sum_{i=1}^{m}[y_i=-1][a(x_i)=+1]}{\sum_{i=1}^{m}[y_i=-1]}=\frac{FP}{\sum_{i=1}^{m}[y_i=-1]}\]
+        \item Доля верных положительных классификаций
+        \[TPR(a, X^m) = \frac{\sum_{i=1}^{m}[y_i=+1][a(x_i)=+1]}{\sum_{i=1}^{m}[y_i=+1]}=\frac{TP}{\sum_{i=1}^{m}[y_i=+1]}\]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Кривая ошибок}
+    \begin{itemize}
+        \item \textbf{ROC-кривая} - компромисс между уровнем ложной тревоги и долей 
+        верного отклика 
+    \end{itemize}
+    \begin{figure}
+        \includegraphics{roc_curve.png}
+        \caption{По оси Х откладывается FPR, по оси Y - TPR}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Площадь под ROC-кривой}
+    \begin{itemize}
+        \item Чем больше для каждого значения ошибки FPR значение правильного 
+        предсказания TPR, тем лучше работает классификатор. Т.о., площадь
+        под кривой (Area Under Curve, AUC/AUROC) необходимо максимизировать.
+    \end{itemize}
+    \begin{figure}
+        \includegraphics[scale=0.5]{auroc.png}
+        \caption{ROC- кривые для наилучшего (AUC=1), случайного (AUC=0.5) 
+        и наихудшего (AUC=0) алгоритма.}
+    \end{figure}
+\end{frame}
