@@ -40,10 +40,10 @@ Conditional Random Fields, чтобы уменьшить число ложноп
 \begin{minipage}{1.0\linewidth}
     \begin{center}
     
-    \includegraphics[scale=0.49]{annot6_features.jpg}
-    \captionof{}{Пайплайн для задачи предсказания выживаемости. Состоит из трех шагов:
+    \includegraphics[scale=0.49]{annot6_features.jpg} \\
+    \caption{\scriptsize{Пайплайн для задачи предсказания выживаемости. Состоит из трех шагов:
     сбор клинических данных, изображений и препроцессинга. Затем, выбираются извлеченные признаки и производится 
-    предсказание выживаемости.}
+    предсказание выживаемости.}}
 \end{center}
 \end{minipage}
 
@@ -64,7 +64,9 @@ Conditional Random Fields, чтобы уменьшить число ложноп
 
     \begin{minipage}{1.0\linewidth}
         \begin{center} 
-        \includegraphics[scale=0.5]{ann6_arch.png}
+        \includegraphics[scale=0.5]{ann6_arch.png}\\
+        \caption{\scriptsize{Архитектура NormResSE-UNet3+}}
+        
      \end{center}
 
     \end{minipage}
@@ -77,14 +79,25 @@ Conditional Random Fields, чтобы уменьшить число ложноп
 Было обучено несколько моделей нейронных сетей для задачи сегментации опухолей головы и шеи. 
 Результаты сведены в единую таблицу.
 \begin{minipage}{1.0\linewidth}
-    \includegraphics[scale=0.5]{ann6_res.png}
+    \begin{center}
+        
+    
+    \includegraphics[scale=0.5]{ann6_res.png}\\
+    \caption{\scriptsize{Количественные результаты сегментации}}
+\end{center}
 \end{minipage}
 \\
 
 Результаты предсказания выживаемости. Предложенная регрессионная модель CoxPH показала 
 лучший результат: \\
+\\
 \begin{minipage}{1.0\linewidth}
-    \includegraphics[scale=0.5]{ann6_reg_res.png}
+    \begin{center}
+        
+   
+    \includegraphics[scale=0.5]{ann6_reg_res.png}\\
+    \caption{\scriptsize{Количественные результаты предсказания выживаемости.}}
+\end{center}
 \end{minipage}
 
 

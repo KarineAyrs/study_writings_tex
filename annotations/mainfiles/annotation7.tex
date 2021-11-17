@@ -24,10 +24,10 @@
 \\
 \begin{minipage}{1.0\linewidth}
     \begin{center}
-        \includegraphics[scale=0.6]{ann7_arch.png}
-        \caption{Схематическое представление метода, описанного в статье.
+        \includegraphics[scale=0.6]{ann7_arch.png} \\
+        \caption{\scriptsize{Схематическое представление метода, описанного в статье.
         T1, T2, T1ce, FLAIR - входные модальности МРТ-изображения, x4,x2 - понижающий
-        фактор входа сети. Пунткирные линии - соединения между блоками \(C_i\).}
+        фактор входа сети. Пунткирные линии - соединения между блоками \(C_i\).}}
     \end{center}
 \end{minipage}
 
@@ -38,16 +38,18 @@ BraTS 2018
 Результат сегментации  оценивался по метрике Dice, отдельно вычисленной
 для следующих частей опухоли: WT (whole tumor) -  вся опухоль, ET (enchancing tumor) - 
 усиливающаяся часть опухоли и TC (tumor core) - ядро опухоли. \\
-Результаты без аугментации выходов: \\
+ \\
 \begin{minipage}{1.0\linewidth}
     \begin{center}
-        \includegraphics[scale=0.8]{ann7_res.png}
+        \includegraphics[scale=0.8]{ann7_res.png} \\
+        \caption{\scriptsize{Результаты без аугментации выходов}}
     \end{center}
 \end{minipage}
-Результаты с аугментацией выходов: \\
+ \\
 \begin{minipage}{1.0\linewidth}
     \begin{center}
-        \includegraphics[scale=0.6]{ann7_res1.png}
+        \includegraphics[scale=0.6]{ann7_res1.png} \\
+        \caption{\scriptsize{Результаты с аугментацией выходов}}
     \end{center}
 \end{minipage}
 \subsection*{Заключение}
