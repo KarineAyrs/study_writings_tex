@@ -1,0 +1,53 @@
+%!TEX root = ../slides2.tex
+
+\section{Loss}
+\begin{frame}
+    \frametitle{Loss}
+    \begin{itemize}
+        \item \(\overline{y}=\{\overline{y_i}\}_{i=1}^{N}\)- множество предсказаний
+        \item для каждого \(i\)
+        предсказание имеет вид: \(\overline{y_i}=\{\overline{p}^t_i,\overline{b}^t_i, \overline{s}^t_i\}_{t=1}^T\)
+        \item правильный ответ имеет вид: \(y=\{c^t,b^t,s^t\}_{t=1}^T\) 
+        \begin{itemize}
+            \item \(\overline{y}_{pos} = \underset{\overline{y_i}\in\overline{y}}{argmin} L_{match}(y, \overline{y_i})\)
+            \item \(L_{match}(y, \overline{y_i})=k_{cls}L_{cls}(y, \overline{y_i})+
+            k_{box}L_{box}(y, \overline{y_i})+ k_{mask}L_{mask}(y, \overline{y_i})\)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{Метрики}
+\subsection{IoU}
+\begin{frame}
+    \frametitle{Метрики}
+    \begin{itemize}
+        \item IoU:
+         \begin{figure}
+            \includegraphics[scale=0.2]{iou.png}
+        \end{figure}
+        
+    \end{itemize}
+\end{frame}
+\subsection{mAP}
+\begin{frame}
+    \frametitle{Метрики}
+    \begin{itemize}
+        \item \(mAP\):
+        \begin{itemize}
+            \item \(p=\frac{TP}{TP+FP}, \quad r=\frac{TP}{TP+FN}\)
+            \item \(AP=\int_{0}^{1}p(r)dr\)
+            \item \(mAP=\frac{1}{n}\sum_{i=1}^{n}AP_{i}, n -\)количество классов, \(AP_{i} - AP\) для \(i\)-го класса
+        \end{itemize}
+
+        \begin{figure}
+            \includegraphics[scale=0.2]{prcurve.png}
+        \end{figure}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \begin{center}
+        \text{СПАСИБО ЗА ВНИМАНИЕ!}
+    \end{center}
+\end{frame}

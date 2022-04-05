@@ -1,0 +1,40 @@
+%!TEX root = ../slides2.tex
+
+\section{Referring object segmentation}
+
+\begin{frame}
+  \frametitle{Referring object segmentation}
+  \begin{itemize}
+    \item \textbf{Referring video object segmentation (R-VOS)} -задача сегментации объекта на видео по его описанию на натуральном языке.
+    \item \textbf{Referring image segmentation} - задача сегментации объекта на изображении по его описанию на натуральном языке.
+    
+  \end{itemize}
+\end{frame}
+
+
+\section{Актуальность}
+
+\begin{frame}
+  \frametitle{Актуальность}
+  \begin{itemize}
+    \item видеонаблюдение 
+    \item приложения для редактирования изображений и видео 
+    \item обнаружение патологий на медицинских изображениях
+    \item взаимодействие человека и робота посредством языка
+  \end{itemize}
+  
+\end{frame}
+
+
+\section{Цель}
+\begin{frame}
+    \frametitle{Цель}
+    \begin{itemize}
+        \item Дан видеоклип \(V=\{I_t\}_{t=1}^{T}\), содержащий \(T\) фреймов и 
+        текстовое описание \(E=\{e_l\}_{l=1}^L\), состоящее из \(L\) слов. \\
+        Цель: создать маску сегментации описываемого объекта 
+        \(S=\{s_t\}_{t=1}^T, s_t \in \mathbb{R}^{HxW}\), для каждого фрейма. 
+        \item Дано изображение \(I\) и текстовое описание \(E\). \\Цель: создать маску сегментации описываемого объекта.
+
+    \end{itemize}
+\end{frame}
