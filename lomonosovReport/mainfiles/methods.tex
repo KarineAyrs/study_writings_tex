@@ -1,0 +1,51 @@
+%!TEX root = ../slides.tex
+
+\section{Методы}
+
+\subsection{NormResSE-UNet3+}
+\begin{frame}
+    \frametitle{NormResSE-UNet3+}
+    \begin{figure}
+        \includegraphics[scale=0.4]{normresunet.png}
+        % \caption{Архитектура}
+    \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Loss}
+
+    \[DiceLoss(y, \overline{p})=1 - \frac{2\sum_{i}^{N}y_{i}\overline{p}_i+1}{\sum_{i}^{N}y_i+\sum_{i}^{N}\overline{p}_i+1}\]
+    \[FocalLoss(y, \overline{p}) = -\frac{1}{N}\sum_{i}^{N}y_{i}(1-\overline{p}_i)^{k}ln(\overline{p}_i)\]
+
+    \[Loss = log(cosh(DiceLoss))+FocalLoss\]
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Результаты}
+    \begin{figure}
+        \includegraphics[scale=0.35]{normRes.png}
+    \end{figure}
+\end{frame}
+
+\subsection{ViT-V-Net}
+
+\begin{frame}
+    \frametitle{ViT-V-Net}
+    \begin{figure}
+        \includegraphics[scale=0.5]{vit-v-net.png}
+    \end{figure}
+\end{frame}
+
+
+\subsection{Medical Transformer}
+
+\begin{frame}
+    \frametitle{Medical Transformer}
+    \begin{figure}
+        \includegraphics[scale=0.45]{medT.png}
+    \end{figure}
+\end{frame}
