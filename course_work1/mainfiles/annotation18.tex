@@ -37,38 +37,69 @@ Local-Global training:\\
 
 \begin{minipage}{1.0\linewidth}
     \begin{center}
-        \includegraphics[scale=0.5]{ann18_arch.png} \\
-        % \caption{\scriptsize{
-        %    Архитектура MedT.
-        % }}
+        \includegraphics[scale=0.35]{ann18_arch.png} \\
+        \captionof{figure}{\scriptsize{
+           Архитектура MedT.
+        }}
     \end{center}
     
 \end{minipage} 
 \subsection*{Данные}
 Brain US, Glas, MoNuSeg
+% \newpage
 \subsection*{Результаты}
-\begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.5]{ann18_res.png} \\
-        % \caption{\scriptsize{
-        %    Количественное сравнение предложенных методов со сверточными бейзлайнами, основанными на трансформерах
-        %    по мерам F1 и IoU.
-        % }}
-    \end{center}
+% \begin{minipage}{1.0\linewidth}
+%     \begin{center}
+%         \includegraphics[scale=0.5]{ann18_res.png} \\
+%         % \caption{\scriptsize{
+%         %    Количественное сравнение предложенных методов со сверточными бейзлайнами, основанными на трансформерах
+%         %    по мерам F1 и IoU.
+%         % }}
+%     \end{center}
     
-\end{minipage} \\
+% \end{minipage} 
 
-\begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.6]{ann18_mri.png} \\
-        % \caption{\scriptsize{
-        %     Качественные результаты на примерах тестовых изображений из датасетов Brain US, Glas и MoNuSeg.
-        %     Красный прямоугольник очерчивает регионы, где именно MedT показывает лучшие результаты, чем 
-        %     другие методы в сравнении.
-        % }}
-    \end{center}
+{\small
+
+\begin{center}
+\captionof{table}{
+       Количественное сравнение предложенных методов со сверточными бейзлайнами, основанными на трансформерах
+       по мерам F1 и IoU.}
+\begin{tabular}{
+    |c | c | c  c | c c | c c |}
+\hline
+Type                                                               & Network                                                     & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}Brain US} & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}GlaS} & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}MoNuSeg} \\ \hline
+&                                                             & F1                         & IoU                        & F1                   & IoU                  & F1                    & IoU                   \\ \cline{3-8} 
+& FCN                                                       & 82.79                           & 75.02                       & 66.61                     & 50.84                 & 28.84                      & 28.71                  \\
+\begin{tabular}[c]{@{}c@{}}Convolutional \\ Baselines\end{tabular} & U-Net                                                      & 85.37                           & 79.31                       & 77.78                     & 65.34                 & 79.43                      & 65.99                  \\
+& U-Net++                                                 & 86.59                           & 79.95                       & 78.03                          & 65.55                      & 79.49                           & 66.04                       \\
+& Res-UNet                                                  & 87.50                            & 79.61                       & 78.83                     & 65.95                 & 79.49                      & 66.07                  \\ \hline
+\begin{tabular}[c]{@{}c@{}}Fully Attention \\ Baseline\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Axial Attention\\ U-Net\end{tabular} & 87.92                           & 80.14                       & 76.26                     & 63.03                 & 76.83                      & 62.49                  \\ \hline
+& Gated Axial Attn.                                           & 88.39                           & 80.7                        & 79.91                     & 67.85                 & 76.44                      & 62.01                  \\
+Proposed                                                           & LoGo                                                        & 88.54                           & 80.84                       & 79.68                     & 67.69                 & 79.56                      & 66.17                  \\
+& MedT                                                        & \textbf{88.84}                           & \textbf{81.34}                       & \textbf{81.02}                     & \textbf{69.61}                 & \textbf{79.55}                      & \textbf{66.17}    \\ \hline             
+\end{tabular}
+
     
-\end{minipage}
+\end{center}
+
+}
+
+
+
+
+
+
+% \begin{minipage}{1.0\linewidth}
+%     \begin{center}
+%         \includegraphics[scale=0.5]{ann18_mri.png} \\
+%         \captionof{figure}{\scriptsize{
+%             Качественные результаты на примерах тестовых изображений из датасетов Brain US, Glas и MoNuSeg.
+%             Красный прямоугольник очерчивает регионы, где именно MedT показывает лучшие результаты, чем 
+%             другие методы в сравнении.
+%         }}
+%     \end{center}
+% \end{minipage}
 
 \subsection*{Заключение}
 В данной статье было продемонстрировано, что предложенные методы превосходят существующие 

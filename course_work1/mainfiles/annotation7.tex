@@ -25,9 +25,9 @@
 \begin{minipage}{1.0\linewidth}
     \begin{center}
         \includegraphics[scale=0.6]{ann7_arch.png} \\
-        % \caption{\scriptsize{Схематическое представление метода, описанного в статье.
-        % T1, T2, T1ce, FLAIR - входные модальности МРТ-изображения, x4,x2 - понижающий
-        % фактор входа сети. Пунткирные линии - соединения между блоками \(C_i\).}}
+        \captionof{figure}{\scriptsize{Схематическое представление метода, описанного в статье.
+        T1, T2, T1ce, FLAIR - входные модальности МРТ-изображения, x4,x2 - понижающий
+        фактор входа сети. Пунткирные линии - соединения между блоками \(C_i\).}}
     \end{center}
 \end{minipage}
 
@@ -36,20 +36,40 @@
 Результат сегментации  оценивался по метрике Dice, отдельно вычисленной
 для следующих частей опухоли: WT (whole tumor) -  вся опухоль, ET (enchancing tumor) - 
 усиливающаяся часть опухоли и TC (tumor core) - ядро опухоли. \\
- \\
-\begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.8]{ann7_res.png} \\
-        % \caption{\scriptsize{Результаты без аугментации выходов}}
-    \end{center}
-\end{minipage}
- \\
-\begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.6]{ann7_res1.png} \\
-        % \caption{\scriptsize{Результаты с аугментацией выходов}}
-    \end{center}
-\end{minipage}
+ 
+\begin{center}
+    \captionof{table}{Результаты без аугментации выходов}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    Method & WT & ET & TC\\
+    \hline
+    UNet & 0.901 & 0.779 & 0.837 \\
+    ME UNet & 0.907 & 0.784 & 0.827\\
+    C ME UNet & 0.908 & 0.784 & 0.844\\
+    \hline
+\end{tabular}
+
+\end{center}
+
+
+
+\begin{center}
+    
+
+\captionof{table}{Результаты с аугментацией выходов}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Method & WT & ET & TC\\
+\hline
+UNet & 0.901 & 0.779 & 0.837 \\
+ME UNet & 0.907 & 0.784 & 0.827\\
+C ME UNet & 0.908 & 0.784 & 0.844\\
+\hline
+\end{tabular}
+
+\end{center}
+
+
 \subsubsection*{Заключение}
 
 В данной работе был предложен алгоритм автоматической сегментации 

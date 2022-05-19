@@ -1,6 +1,6 @@
 \subsection*{Is it Time to Replace CNNs with Transformers for Medical Images?}
 
-\subsection*{Ссылка} \url{https://arxiv.org/abs/2108.09038}
+% \subsection*{Ссылка} \url{https://arxiv.org/abs/2108.09038}
 \subsubsection*{Введение}
 В течение последних лет сверточные нейронные сети (СНС)
 являлись лидирующим методом в автоматической медицинской 
@@ -42,21 +42,53 @@ APTOS 2019, ISIC 2019, CBIS-DDSM
 \end{itemize}
 
 
-
-\begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.5]{ann11_res.png} \\
-        % \caption{\scriptsize{Сравнение результатов предсказания СНС и ViT в разрезе различных стратегий инициализации весов 
-        % на медицинских изображениях.}}
-    \end{center}
+{\small
+\begin{center}
+    \footnotesize
+    \captionof{table}{Сравнение результатов предсказания СНС и ViT в разрезе \\ различных стратегий инициализации весов 
+    на медицинских изображениях.}
+    \begin{tabular}{llccc}
+    \toprule
+    \textbf{Initialization} & \textbf{Model} & \textbf{APTOS2019}, $\kappa \uparrow$ & \textbf{ISIC2019}, Recall $\uparrow$ & \textbf{DDSM}, ROC-AUC $\uparrow$ 
+    \\
+    \midrule
+    \multirow{2}{*}{Random}
+    & ResNet50 & 0.849 $\pm$ 0.022 & 0.662 $\pm$ 0.018 & 0.917 $\pm$ 0.005 
     
-\end{minipage}
+    \\ 
+    & DeiT-S   & 0.687 $\pm$ 0.017 & 0.579 $\pm$ 0.028 & 0.908 $\pm$ 0.015 
+    
+    \\[0.5em] %\hlineB{4} %\hline
+    %%%%%%
+    %%%%%%
+    %%%%%%
+    \multirow{2}{*}{ImageNet (supervised)} 
+    & ResNet50 & 0.893 $\pm$ 0.004 & 0.810 $\pm$ 0.008 & 0.953 $\pm$ 0.008 
+    
+    \\ 
+    & DeiT-S   & 0.896 $\pm$ 0.005 & 0.844 $\pm$ 0.021 & 0.947 $\pm$ 0.011 
+    % & - $\pm$ - 
+    \\[0.5em] %\hline
+    %%%%%%
+    %%%%%%
+    %%%%%%
+    \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}ImageNet (supervised) + \\ Self-supervised with DINO \end{tabular}} 
+    & ResNet50 & 0.894 $\pm$ 0.008 & 0.833 $\pm$ 0.007 & 0.955 $\pm$ 0.002 
+    % & - $\pm$ - 
+    \\ 
+    & DeiT-S   & 0.896 $\pm$ 0.010 & 0.853 $\pm$ 0.009 & 0.956 $\pm$ 0.002 
+    % & - $\pm$ - 
+    \\ 
+    \bottomrule
+    \end{tabular}
+\end{center}
+}
 
 \begin{minipage}{1.0\linewidth}
     \begin{center}
         \includegraphics[scale=0.4]{ann11_res2.png} \\
-        % \caption{\scriptsize{Сравнение карт значимости (saliency maps) изображений из трех датасетов. В каждой колонке 
-        % представлены оригинальное изображение, визуализация ResNet50 Grad-CAM saliency map и карты внимания (attention map) DEIT-S.}}
+        \captionof{figure}{\scriptsize{Сравнение карт значимости (saliency maps) изображений из трех датасетов. В каждой \\ 
+        колонке представлены оригинальное изображение, визуализация ResNet50 Grad-CAM saliency map и карты \\ внимания (attention map) DEIT-S.}}
     \end{center}
     
 \end{minipage}

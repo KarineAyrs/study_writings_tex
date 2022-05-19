@@ -1,6 +1,48 @@
-\section{Практическая часть}
-
-
-\newpage
-
 \section{Результаты}
+Был проведен обзор двадцати статей, включающих в себя методы по сегментации злокачественных образований как в головном мозге, так и в других 
+жизненно важных органах человека. Методы применялись к данным различных модальностей: МРТ, ПЭТ, КТ как по отдельности, так и в совокупности. Также, 
+были представлены методы для реконструкции/восстановления ПЭТ-изображений по данным других исследований (МРТ, КТ). Полная таблица рассмотренных статей представлена ниже: 
+
+
+{\small 
+
+\begin{flushleft}
+    
+
+\captionof{table}{Общая таблица рассмотренных методов}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|c|c|}
+
+    \hline
+    Модальность  & Метод \\ 
+
+    \hline 
+    \multirow{4}{*}{МРТ} & DQN+TD(0)\cite{ann1}, Brain Parcellation\cite{ann3}, Cascaded Unet\cite{Cascaded} \\ 
+                         \cline{2-2}
+                         &3D Self-Supervised Methods for Medical Imaging \cite{3DSelfSuper} \\
+                         \cline{2-2}
+                         & 3DSimCLR\cite{ann14}, Medical Transformer\cite{MedT}, U-net Transfromer\cite{ann19}, \\
+                         \cline{2-2}
+                         &  AFTer-Unet\cite{ATerUnet}, PGL \cite{ann15}, CaraNet\cite{CaraNet}, ViT-V-Net \cite{VitVNet}\\
+
+    \hline 
+    Рентген & MIL\cite{ann2}, MEDUSA\cite{ann17} \\
+    
+    \hline 
+    ПЭТ/КТ & ES-Unet\cite{ann4}, NormResSE-Unet3+\cite{NormRes}, PET images from CT\cite{ann10}   \\
+      
+    \hline
+    ПЭТ & Deep Kernel Representation\cite{ann5}, Direct PET Image Reconstruction\cite{ann9}\\
+                      
+
+    \hline 
+    МРТ/КТ & Effects of Self-Attention for Medical Image Analysis \cite{ann16} \\
+    \hline
+    Другое & Is it Time to Replace CNNs with Transformers for Medical Images? \cite{ann11} \\
+        
+        \hline
+        \hline
+\end{tabular}
+}
+\end{flushleft}
+}

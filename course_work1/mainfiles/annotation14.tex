@@ -33,38 +33,39 @@ Dice score на тестовом множестве. \par
 BraTS 2018, 3D КТ сканы с опухолями поджелудочной железы (ПЖЖ).
 \subsection*{Результаты}
 
-\begin{minipage}{0.49\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.3]{ann14_res1.png} \\
-        % \caption{\scriptsize{
-        %     Средний Dice коэффициент после дообучения модели на 5\%,
-        %     10\%, 25\%, 50\%, 100\% снимков ПЖЖ. 
-        %     3D SimCLR модель (синий) превосходит baseline (оранжевый), когда доступно менее, чем 
-        %     25\% данных.
-        % }}
-    \end{center}
+% \begin{minipage}{1.0\linewidth}
+%     \begin{center}
+%         \includegraphics[scale=0.3]{ann14_res1.png} \\
+%         \captionof{figure}{\scriptsize{
+%             Средний Dice коэффициент после дообучения модели на 5\%,
+%             10\%, 25\%, 50\%, 100\% снимков ПЖЖ. 
+%             3D SimCLR модель (синий) превосходит baseline (оранжевый), когда доступно менее, чем 
+%             25\% данных.
+%         }}
+%     \end{center}
     
-\end{minipage}
-\begin{minipage}{0.49\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.3]{ann14_res2.png} \\
-        % \caption{\scriptsize{По оси Y - средний Dice коэффициент после дообучения модели на 5\%,
-        % 10\%, 25\%, 50\%, 100\% тренировочного множества (BraTS).Предложенная 
-        % модель - синяя линия, baseline - оранжевая.}}
-    \end{center}
+% \end{minipage}
+% \\
+% \begin{minipage}{1.0\linewidth}
+%     \begin{center}
+%         \includegraphics[scale=0.3]{ann14_res2.png} \\
+%         \captionof{figure}{\scriptsize{По оси Y - средний Dice коэффициент после дообучения модели на 5\%,
+%         10\%, 25\%, 50\%, 100\% тренировочного множества (BraTS).Предложенная 
+%         модель - синяя линия, baseline - оранжевая.}}
+%     \end{center}
     
-\end{minipage} 
+% \end{minipage} 
 
 
 \begin{minipage}{1.0\linewidth}
     \begin{center}
         \includegraphics[scale=0.3]{ann14_mri.png} \\
-        % \caption{\scriptsize{Тепловые карты различных перцентилей предсказаний классов опухоли 
-        % для примера из датасета BraTS. Черные пиксели представляют опухоль целиком.}}
+        \captionof{figure}{\scriptsize{Тепловые карты различных перцентилей предсказаний классов опухоли 
+        для примера из \\ датасета BraTS. Черные пиксели представляют опухоль целиком.}}
     \end{center}
     
 \end{minipage}
-\newpage
+
 \subsection*{Заключение}
 Результаты экспериментов показывают потенциал предлагаемого метода 3D SimCLR с 
 дополненной информацией из Байесовского вывода в разрезе эффективности 

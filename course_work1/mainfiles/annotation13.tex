@@ -67,7 +67,7 @@
 \begin{minipage}{1.0\linewidth}
     \begin{center}
         \includegraphics[scale=0.35]{ann13_arch.png} 
-        % \caption{\scriptsize{(а) - 3D-CPC; (b) - 3D-RPL; (c) - 3D-Jig; (d) - 3D-Rot; (e) - 3D-Exe.}}
+        \captionof{figure}{\scriptsize{(а) - 3D-CPC; (b) - 3D-RPL; (c) - 3D-Jig; (d) - 3D-Rot; (e) - 3D-Exe.}}
     \end{center}
     
 \end{minipage}
@@ -77,28 +77,65 @@ BraTS 2018, 3D КТ сканы с опухолями поджелудочной 
 challenge.
 \subsection*{Результаты}
  Предложенные методы были опробованы в различных медицинских задачах и показали 
- следующие результаты: \\  \\
- \textbf{1. Сегментация опухолей мозга} \\
+ следующие результаты: 
+
+
+
+% \begin{itemize}
+%     \item 
+% \end{itemize}
+
+ \subsubsection*{1. Сегментация опухолей мозга} 
 Все предложенные методы продолевают бейзлайны, так же, как и двумерные версии этих методов.
 Результаты, полученные в данной здаче показвают наличие обощающей способности
 у всех предложенных методов. \\
- \begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.5]{ann13_res2.png} \\
-        % \caption{\scriptsize{Результаты сегментации BraTS}}
-    \end{center}
-\end{minipage} \\
-\textbf{2. Сегментация опухолей поджелудочной железы} \\
+
+\subsubsection*{2. Сегментация опухолей поджелудочной железы} 
 Результаты, полученные с помощью предложенных методов преодолевают бейзлайны для поставленной 
 задачи. Также, предложенные методы показывают достаточно быструю сходимость.
+
+
+
+\begin{center}
+    \captionof{table}{Результаты сегментации BraTS} 
+    \begin{tabular}[b]{ |c c c c |} \toprule
+        Model & ET & WT & TC  \\
+        \hline
+        3D-From scratch                      & 76.38 & 87.82 & 83.11 \\
+        3D Supervised                        & 78.88 & 90.11 & 84.92 \\
+        \hline
+        2D-CPC                               & 76.60 & 86.27 & 82.41 \\
+        2D-RPL                               & 77.53 & 87.91 & 82.56 \\ 
+        2D-Jigsaw                            & 76.12 & 86.28 & 83.26 \\ 
+        2D-Rotation                          & 76.60 & 88.78 & 82.41 \\
+        2D-Exemplar                          & 75.22 & 84.82 & 81.87 \\ 
+        \hline 
+        Popli \emph{et al.}   & 74.39 & 89.41 & 82.48 \\
+        Baid \emph{et al.}     & 74.80 & 87.80 & 82.66 \\
+        Chandra \emph{et al.}& 74.06 & 87.19 & 79.89 \\
+        Isensee \emph{et al.}& 80.36 & \textbf{90.80} & 84.32 \\ 
+        \hline 
+        3D-CPC                               & 80.83 & 89.88 & 85.11 \\
+        3D-RPL                               & \textbf{81.28} & 90.71 & \textbf{86.12} \\
+        3D-Jigsaw                            & 79.66 & 89.20 & 82.52 \\
+        3D-Rotation                          & 80.21 & 89.63 & 84.75 \\
+        3D-Exemplar                          & 79.46 & \textbf{90.80} & 83.87 \\
+        \hline
+    \end{tabular}
+    
+        
+\end{center}
+    
+
+
 
 \begin{minipage}{1.0\linewidth}
     \begin{center}
         \includegraphics[scale=0.5]{ann13_panc_res.png} \\
-        % \caption{\scriptsize{Результаты сегментации опухолей поджелудочной железы.
-        % На меньшем количестве размеченных данных supervised baseline (коричневый) показывает 
-        % низкую обобщающую способность по сравнению с предложенными методами. Также, 3D методы 
-        % превосходят свои двумерные аналоги.}}
+        \captionof{figure}{\scriptsize{Результаты сегментации опухолей поджелудочной железы.
+        На меньшем количестве \\ размеченных данных supervised baseline (коричневый) показывает 
+        низкую обобщающую способность по \\ сравнению с  предложенными методами. Также, 3D методы 
+        превосходят свои двумерные аналоги.}}
     \end{center}
 \end{minipage} \\
 \subsubsection*{Заключение}

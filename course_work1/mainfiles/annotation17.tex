@@ -19,10 +19,10 @@ self-attention механизм, приспособленный для зада�
 
 \begin{minipage}{1.0\linewidth}
     \begin{center}
-        \includegraphics[scale=0.6]{ann17_arch.png} \\
-        % \caption{\scriptsize{
-        %     Архитектура MEDUSA.
-        % }}
+        \includegraphics[scale=0.5]{ann17_arch.png} \\
+        \captionof{figure}{\scriptsize{
+            Архитектура MEDUSA.
+        }}
     \end{center}
     
 \end{minipage} 
@@ -30,16 +30,36 @@ self-attention механизм, приспособленный для зада�
 \subsection*{Данные}
 CXR-2 Dataset
 \subsection*{Результаты}
-\begin{minipage}{1.0\linewidth}
-    \begin{center}
-        \includegraphics[scale=0.6]{ann17_res.png} \\
-        % \caption{\scriptsize{
-        %     Sensitivity, PPV - positive predictive value и точность предложенного метода MEDUSA 
-        %     в сравнении с другими сетями на данных из CXR-2 Dataset.
-        % }}
-    \end{center}
-    
-\end{minipage} 
+
+{\small
+
+\begin{center}
+    \captionof{table}{
+            Sensitivity, PPV - positive predictive value и точность предложенного метода MEDUSA 
+            в сравнении с другими сетями на данных из CXR-2 Dataset.
+        }
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+         \textbf{Architecture} & \textbf{Sensitivity ($\%$)} & \textbf{PPV ($\%$)} & \textbf{Accuracy ($\%$)} \\
+    \hline
+    ResNet-50 & 88.50 & 92.20 & 90.50\\
+    \hline
+     COVID-Net& 93.50 & \textbf{100} & 94.00 \\
+    \hline
+     COVID-Net CXR-2 & 95.50 & 97.00 &  96.30 \\
+    \hline
+    SE-ResNet-50  & 90.50 & 98.90 & 94.75\\
+    \hline
+    CBAM  & 70.00 & \textbf{100} & 85.00\\
+    \hline
+    MEDUSA & \textbf{97.50} & 99.00 & \textbf{98.30}\\
+    \hline
+    \end{tabular}\par
+
+\end{center}
+
+}
+
 \subsection*{Заключение}
 Было показано, что предложенный метод показывает хорошие результаты как в предсказаниях так и в скорости в сравнении с 
 уже существующими моделями.
